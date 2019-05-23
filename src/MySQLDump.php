@@ -173,7 +173,7 @@ class MySQLDump
 
 				$len = strlen($s) - 1;
 				$s[$len - 1] = ')';
-				fwrite($handle, $s, $len . ";\n");
+				fwrite($handle, $s . ";\n", $len);
 
 //                $size += $len;
 //                if ($size > self::MAX_SQL_SIZE) {
